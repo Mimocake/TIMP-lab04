@@ -1,0 +1,12 @@
+name: linux
+on: [commit, push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get repo files
+        uses: actions/checkout@v6
+      - name: Configure build directory
+        run: cmake -H. -B build
+      - name: Build project
+        run: cmake --build build
