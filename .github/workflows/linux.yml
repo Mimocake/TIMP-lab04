@@ -1,5 +1,5 @@
 name: linux
-on: [commit, push]
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
