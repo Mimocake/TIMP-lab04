@@ -18,4 +18,4 @@ build_script:
 
 test_script:
   - .\build\%CONFIGURATION%\hello_world.exe
-  - echo "1 5 -6" | .\build\%CONFIGURATION%\solver.exe
+  - echo 1 5 -6 | .\build\%CONFIGURATION%\solver.exe
