@@ -1,0 +1,21 @@
+version: 1.0.{build}
+
+image:
+  - Visual Studio 2022
+  - Visual Studio 2019
+
+platform:
+  - x64
+  - x86
+
+configuration:
+  - Debug
+  - Release
+
+build_script:
+  - cmake -B build -DCMAKE_BUILD_TYPE=%CONFIGURATION%
+  - cmake --build build --config %CONFIGURATION%
+
+test_script:
+  - ./build/%CONFIGURATION%/hello_world
+  - echo "1 5 -6" | ./build/%CONFIGURATION%/solver
