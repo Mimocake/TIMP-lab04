@@ -12,6 +12,9 @@ configuration:
   - Debug
   - Release
 
+matrix:
+  fast_finish: true
+
 build_script:
   - cmake -B build -DCMAKE_BUILD_TYPE=%CONFIGURATION%
   - cmake --build build --config %CONFIGURATION%
