@@ -1,7 +1,11 @@
 #include "solver.h"
 
 #include <stdexcept>
-#include <math.h>
+#ifdef _WIN32
+	#include <cmath>
+#else
+	#include <math.h>
+#endif
 
 void solve(float a, float b, float c, float& x1, float& x2)
 {
