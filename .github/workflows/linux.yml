@@ -31,6 +31,10 @@ jobs:
         with:
           name: Applications
           path: ./apps
+      - name: Fix permissions
+        run: |
+          chmod +x ./apps/hello_world
+          chmod +x ./apps/solver
       - name: Test hello_world
         run: ./apps/hello_world
       - name: Test solver
