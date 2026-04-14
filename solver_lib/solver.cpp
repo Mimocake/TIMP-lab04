@@ -9,13 +9,13 @@
 
 void solve(float a, float b, float c, float& x1, float& x2)
 {
-    float d = (b * b) - (4 * a * c);
+    float d = (b * b) - (4.0f * a * c);
 
-    if (d < 0)
+    if (d < 0.0f)
     {
         throw std::logic_error{"error: discriminant < 0"};
     }
 
-    x1 = (-b - std::sqrt(d)) / (2 * a);
-    x2 = (-b + std::sqrt(d)) / (2 * a);
+    x1 = (-b - std::sqrt(d)) / (2.0f * a);
+    x2 = (-b + std::sqrt(d)) / (2.0f * a);
 }
