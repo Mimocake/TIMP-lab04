@@ -16,12 +16,12 @@ jobs:
         run: echo "1 5 -6" | ./build/solver
       - name: Upload artifacts
         uses: actions/upload-artifact@v6
-        with: 
+        with:
           name: Applications
           path: |
-            ./build/hello_world
-            ./build/solver
-            
+            ./build/hello_world_application/hello_world
+            ./build/solver_application/solver
+
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -39,4 +39,4 @@ jobs:
         run: ./apps/hello_world
       - name: Test solver
         run: echo "1 5 -6" | ./apps/solver
-        
+
