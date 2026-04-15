@@ -29,10 +29,10 @@ jobs:
           path: ./apps
       - name: Fix permissions
         run: |
-          chmod +x ./apps/hello_world
-          chmod +x ./apps/solver
+          chmod +x ./apps/hello_world_application/hello_world
+          chmod +x ./apps/solver_application/solver
       - name: Test hello_world
-        run: ./apps/hello_world
+        run: ./apps/hello_world_application/hello_world
       - name: Test solver
-        run: echo "1 5 -6" | ./apps/solver
+        run: echo "1 5 -6" | ./apps/solver_application/solver
 
