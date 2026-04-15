@@ -20,5 +20,5 @@ build_script:
   - cmake --build build --config %CONFIGURATION%
 
 test_script:
-  - .\build\%CONFIGURATION%\hello_world_application\hello_world.exe
-  - echo 1 5 -6 | .\build\%CONFIGURATION%\solver_application\solver.exe
+  - .\build\hello_world_application\%CONFIGURATION%\hello_world.exe
+  - echo 1 5 -6 | .\build\solver_application\%CONFIGURATION%\solver.exe
