@@ -21,10 +21,6 @@ jobs:
         run: cmake -H. -B build
       - name: Build project
         run: cmake --build build
-      - name: Test hello_world
-        run: ./build/hello_world
-      - name: Test solver
-        run: echo "1 5 -6" | ./build/solver
       - name: Upload artifacts
         uses: actions/upload-artifact@v6
         with: 
